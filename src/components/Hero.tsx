@@ -51,19 +51,19 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
       </div>
 
-       <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-center relative z-10 max-w-3xl">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6">
             Hi, I'm <span className="gradient-text">Harish Jayaguru</span>
           </h1>
           
-          <div className="text-xl md:text-2xl text-foreground/80 mb-2 h-8">
+          <div className="text-xl md:text-2xl text-foreground/80 mb-2">
             <span className={`${currentIndex >= fullText.length ? '' : 'border-r-2 border-primary animate-blink'}`}>
               {displayText}
             </span>
           </div>
 
-          <div className="text-lg md:text-xl text-foreground/70 mb-8 h-8">
+          <div className="text-lg md:text-xl text-foreground/70 mb-8">
             {showSecondLine && (
               <span className={`${currentIndex2 >= fullText2.length ? '' : 'border-r-2 border-primary animate-blink'}`}>
                 {displayText2}
@@ -76,15 +76,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24">
-<a href="/Harish_Resume.pdf" download target="_blank" rel="noopener noreferrer">
-  <Button 
-    size="lg" 
-    variant="outline"
-    className="border-accent text-accent hover:bg-accent hover:text-background px-8 py-3 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 w-full sm:w-48"
-  >
-    Download Resume
-  </Button>
-</a>
+            <a href="/Harish_Resume.pdf" download target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-accent text-accent hover:bg-accent hover:text-background px-8 py-3 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 w-full sm:w-48"
+              >
+                Download Resume
+              </Button>
+            </a>
 
             <Button 
               size="lg"
